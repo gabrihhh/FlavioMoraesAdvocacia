@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@media (max-width: 576px){
+    body{
+        background-color: gray;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .logo{
+        width: 280px;
+    }
+    .header{
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .title{
+        background-color: white;
+        margin-bottom: 5px;
+        background-image: url('img/title.png'); /* Substitua pelo caminho da sua imagem */
+        background-repeat: no-repeat; /* Impede a repetição da imagem */
+        background-size: cover; /* Ajusta a imagem para cobrir toda a área do elemento */
+        background-position: center; /* Centraliza a imagem */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px;      
+    }
+    .box{
+        background-color: white;
+        margin-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .img{
+        width: 250px;
+    }
+    .footer{
+        width: 100%;
+        height: 150px;
+        background-color: white;
+    }
+    .informacoes{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        div{
+            height: 30px;
+            font-size: 14px;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            -webkit-box-shadow: 1px 0px 30px -5px rgba(0,0,0,0.75);
+            -moz-box-shadow: 1px 0px 30px -5px rgba(0,0,0,0.75);
+            box-shadow: 1px 0px 30px -5px rgba(0,0,0,0.75);
+        }
+    }
+
+    .item {
+        transform: translateX(-100%); /* Começa fora da tela à esquerda */
+        opacity: 0; /* Invisível inicialmente */
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    
+    .whatsapp{
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+    }
+}
