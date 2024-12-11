@@ -28,7 +28,7 @@
     .title{
         background-color: white;
         margin-bottom: 5px;
-        background-image: url('img/title.png'); /* Substitua pelo caminho da sua imagem */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/title.png');  /* Substitua pelo caminho da sua imagem */
         background-repeat: no-repeat; /* Impede a repetição da imagem */
         background-size: cover; /* Ajusta a imagem para cobrir toda a área do elemento */
         background-position: center; /* Centraliza a imagem */
@@ -36,7 +36,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 20px;      
+        padding: 20px 20px;  
     }
     .box{
         background-color: white;
