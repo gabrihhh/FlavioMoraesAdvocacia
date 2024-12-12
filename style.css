@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -14,21 +14,24 @@
         flex-direction: column;
     }
     .logo{
-        width: 280px;
+        width: 50px;
     }
     .header{
         width: 100%;
-        height: 150px;
-        background-color: white;
-        margin-bottom: 5px;
+        height: 50px;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        margin-bottom: 30px;
+    }
+    .menu{
+        width: 50px;
+        background-color: white;
     }
     .title{
-        background-color: white;
+        height: 100vh;
         margin-bottom: 5px;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/title.png');  /* Substitua pelo caminho da sua imagem */
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/title.jpeg');  /* Substitua pelo caminho da sua imagem */
         background-repeat: no-repeat; /* Impede a repetição da imagem */
         background-size: cover; /* Ajusta a imagem para cobrir toda a área do elemento */
         background-position: center; /* Centraliza a imagem */
@@ -37,6 +40,17 @@
         flex-direction: column;
         align-items: center;
         padding: 20px 20px;  
+        line-height: 40px;
+        text-align: center;
+    }
+    .title h3{
+        font-weight:300;
+    }
+    .title h4:nth-child(2){
+        font-weight:300;
+    }
+    .title h5{
+        font-weight:100;
     }
     .box{
         background-color: white;
@@ -44,7 +58,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px 20px;
+        padding: 35px 20px;
+    }
+    .box > h5{
+        font-size: 12px;
+        font-weight: 700;
     }
     .img{
         width: 250px;
@@ -52,7 +70,11 @@
     .footer{
         width: 100%;
         height: 150px;
-        background-color: white;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/title.jpeg');
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .informacoes{
         display: flex;
@@ -60,17 +82,17 @@
         overflow: hidden;
 
         div{
+            background-color: white;
             height: 30px;
             font-size: 14px;
-            border: 1px solid black;
+            border: 2px solid gray;
+            color: rgb(24 11 4);
             border-radius: 5px;
             display: flex;
             align-items: center;
             padding: 5px 10px;
-            margin-bottom: 5px;
-            -webkit-box-shadow: 1px 0px 30px -5px rgba(0,0,0,0.75);
-            -moz-box-shadow: 1px 0px 30px -5px rgba(0,0,0,0.75);
-            box-shadow: 1px 0px 30px -5px rgba(0,0,0,0.75);
+            margin-bottom: 10px;
+            box-shadow: 2px 0px 5px 0px rgba(0,0,0,0.75);
         }
     }
 
@@ -84,5 +106,46 @@
         position: fixed;
         bottom: 50px;
         right: 30px;
+    }
+
+    ol {
+        list-style: none;
+        padding: 0;
+    }
+    
+    li + li {
+        margin-top: 1rem;
+    }
+    
+    li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border:2px solid gray;
+        padding: 1rem;
+        border-radius: 1rem;
+        width: calc(100% - 2rem);
+        box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+    }
+    
+    li::before {
+        counter-increment: list-item;
+        content: counter(list-item);
+        font-size: 3rem;
+        font-weight: 700;
+        width: 2em;
+        height: 2em;
+        background: black;
+        flex: 0 0 auto;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    li:nth-child(even) {
+        flex-direction: row-reverse;
+        margin-right: -2rem;
     }
 }
