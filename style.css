@@ -5,6 +5,9 @@
     font-weight: 400;
     font-style: normal;
 }
+a{
+    text-decoration: none;
+}
 body{
     background-color: gray;
     width: 100vw;
